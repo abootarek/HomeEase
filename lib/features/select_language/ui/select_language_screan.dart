@@ -5,11 +5,16 @@ import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/custom_Button.dart';
 import 'package:home_ease/features/select_language/ui/widgets/check_box.dart';
+import 'package:home_ease/features/select_language/ui/widgets/logo_and_text.dart';
 import 'package:home_ease/features/select_language/ui/widgets/radio_list_tile.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+// ignore: depend_on_referenced_packages
 import 'package:easy_localization/easy_localization.dart';
 import 'package:home_ease/translations/locale_keys.g.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+// ignore: depend_on_referenced_packages
 
 class SelectLanguageScreen extends StatefulWidget {
   const SelectLanguageScreen({super.key});
@@ -20,6 +25,8 @@ class SelectLanguageScreen extends StatefulWidget {
 
 class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
   int selectedOption = 0;
+
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +65,12 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
                   titleText: LocaleKeys.English.tr(),
                   value: 1,
                   selectedOption: selectedOption,
-                  onChanged: (value) {
+                  onChanged: (value) async {
                     setState(() {
                       selectedOption = value!;
-
-                      context.setLocale(const Locale('en'));
-
                       log(selectedOption.toString());
                     });
+                    await context.setLocale(const Locale('en'));
                   }),
               const Divider(
                 endIndent: 10,
@@ -74,19 +79,25 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
                   titleText: LocaleKeys.Arabic.tr(),
                   value: 2,
                   selectedOption: selectedOption,
-                  onChanged: (value) {
+                  onChanged: (value) async {
                     setState(() {
                       selectedOption = value!;
 
-                      context.setLocale(const Locale('ar'));
-
                       log(selectedOption.toString());
                     });
+                    await context.setLocale(const Locale('ar'));
                   }),
               SizedBox(
                 height: 18.h,
               ),
-              const MyCheckboxListTile(),
+              MyCheckboxListTile(
+                isChecked: isChecked,
+                onChanged: (value) {
+                  setState(() {
+                    isChecked = value!;
+                  });
+                },
+              ),
               SizedBox(
                 height: 26.h,
               ),

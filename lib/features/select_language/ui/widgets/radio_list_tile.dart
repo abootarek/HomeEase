@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 
 class MyRadioListTile extends StatelessWidget {
@@ -22,11 +23,11 @@ class MyRadioListTile extends StatelessWidget {
     return ListTile(
       title: Text(titleText,style: TextStyles.font16Black600),
       trailing: Radio<int>(
-        activeColor: Colors.green,
+        activeColor:ColorsApp.mainGreen,
         value: value,
         groupValue: selectedOption,
         onChanged: onChanged,
-
+      
       ),
     );
   }

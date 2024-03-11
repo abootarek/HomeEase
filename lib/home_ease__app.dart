@@ -23,7 +23,7 @@ class HomeEase extends StatelessWidget {
         locale: context.locale,
         theme: ThemeData(
           useMaterial3: true,
-          primarySwatch: Colors.blue,
+          // primarySwatch: Colors.blue,
           fontFamily: 'Quicksand',
         ),
         home: const SelectLanguageScreen(),
