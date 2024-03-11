@@ -14,16 +14,17 @@ void main() async {
   ));
 
   WidgetsFlutterBinding.ensureInitialized();
-  // await EasyLocalization.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
 
   runApp(
     EasyLocalization(
-        supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],
+        supportedLocales: const [Locale('en'), Locale('ar')],
         path:
             'assets/translations', // <-- change the path of the translation files
         fallbackLocale: const Locale('ar', 'EG'),
         // assetLoader: const CodegenLoader(),
+        // saveLocale: true,
         child: const HomeEase()),
   );
 }

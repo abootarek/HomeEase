@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class CustomButton extends StatelessWidget {
   final double width;
@@ -26,16 +28,18 @@ class CustomButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: backGround,
-        borderRadius: BorderRadius.circular(radius),
+        borderRadius: BorderRadius.circular(radius.r),
       ),
-      width: width,
-      height: height,
+      width: width.w,
+      height: height.h,
       child: MaterialButton(
         onPressed: onPressed,
         child: Text(
           text,
-          style: const TextStyle(
+          style:  TextStyle(
             color: ColorsApp.white,
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),

@@ -7,5 +7,19 @@ class TextStyles {
     fontSize: 48.sp,
     fontWeight: FontWeight.w700,
     color: ColorsApp.black,
+    height: 1,
+  );
+   static TextStyle font16Black600 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsApp.black,
+   
+  );
+
+  static TextStyle font12blackOpacity700 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.blackOpacity,
+   
   );
 }
