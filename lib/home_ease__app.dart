@@ -18,9 +18,8 @@ class HomeEase extends StatelessWidget {
         // supportedLocales: context.supportedLocales,
         // locale: context.locale,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-
+          primarySwatch: Colors.blue,
+          fontFamily: 'Quicksand',
         ),
         home: child,
       ),
