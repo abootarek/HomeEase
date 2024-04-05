@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/services.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_ease/core/theming/colors.dart';
-import 'package:home_ease/features/select_language/ui/select_language_screan.dart';
+import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
 
 class HomeEase extends StatelessWidget {
   const HomeEase({super.key});
@@ -26,7 +24,7 @@ class HomeEase extends StatelessWidget {
           // primarySwatch: Colors.blue,
           fontFamily: 'Quicksand',
         ),
-        home: const SelectLanguageScreen(),
+        home: OnBoardingScreen(),
       ),
     );
   }
