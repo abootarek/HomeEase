@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  firebase_core: ^2.28.0
   flutter:
     sdk: flutter
   smooth_page_indicator: ^1.1.0
