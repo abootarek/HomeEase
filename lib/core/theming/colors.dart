@@ -18,3 +18,5 @@ class ColorsApp {
 
   static Color blackOpacity = const Color(0xFF000000).withOpacity(0.5);
 }
+
+

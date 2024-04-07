@@ -6,6 +6,10 @@ class Routes {
 
   static const String homeScreen = "/homeScreen";
 
+    static const String homeLayout = "/homeLayout";
+
+
+
   static const String selectLanguageScreen = "/SelectLanguageScreen";
 
 

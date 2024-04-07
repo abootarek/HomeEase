@@ -9,7 +9,6 @@ import 'package:home_ease/core/widgets/custom_Button.dart';
 
 import 'package:easy_localization/easy_localization.dart';
 
-
 import 'package:home_ease/features/on_boarding/data/models/on_boarding_model.dart';
 import 'package:home_ease/features/on_boarding/ui/widgets/build_on_boardingItem.dart';
 
@@ -27,30 +26,29 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final List<OnBoardingModel> boarding = [
     OnBoardingModel(
-        body:
-        LocaleKeys.findAllYourHouseNeedsInOnePlace.tr(),
-            // "Find all your house needs in one place.\nWe provide every service to make your\nhome experience smooth.".tr(),
-        image: "assets/svgs/boarding1.svg",
-        title: LocaleKeys.easyProcess.tr(),
-        
-        // "Easy Process".tr(),
-        ),
+      body: LocaleKeys.findAllYourHouseNeedsInOnePlace.tr(),
+      // "Find all your house needs in one place.\nWe provide every service to make your\nhome experience smooth.".tr(),
+      image: "assets/svgs/boarding1.svg",
+      title: LocaleKeys.easyProcess.tr(),
+
+      // "Easy Process".tr(),
+    ),
     OnBoardingModel(
-        body:
-        LocaleKeys.weHaveTheBestInClassIndividualsWorkingJustForYou.tr(),
-            // "We have the best in class individuals\nworking just for you. They are well\ntrained and capable of handling\nanything you need.".tr(),
-        image: "assets/svgs/boarding2.svg",
-        title: LocaleKeys.expertPeople.tr(),
-        // "Expert People".tr(),
-        ),
+      body: LocaleKeys.weHaveTheBestInClassIndividualsWorkingJustForYou.tr(),
+      // "We have the best in class individuals\nworking just for you. They are well\ntrained and capable of handling\nanything you need.".tr(),
+      image: "assets/svgs/boarding2.svg",
+      title: LocaleKeys.expertPeople.tr(),
+      // "Expert People".tr(),
+    ),
     OnBoardingModel(
-        body:
-        LocaleKeys.weHaveAllTheHouseholdServicesYouNeedOnADailyBasisWithEasyAccess.tr(),
-            // "We have all the household services\nyou need on a daily basis with\neasy access".tr(),
-        image: "assets/svgs/boarding3.svg",
-        title: LocaleKeys.allInOnePlace.tr(),
-        // "All In One Place".tr(),
-        ),
+      body: LocaleKeys
+          .weHaveAllTheHouseholdServicesYouNeedOnADailyBasisWithEasyAccess
+          .tr(),
+      // "We have all the household services\nyou need on a daily basis with\neasy access".tr(),
+      image: "assets/svgs/boarding3.svg",
+      title: LocaleKeys.allInOnePlace.tr(),
+      // "All In One Place".tr(),
+    ),
   ];
 
   final PageController _pageController = PageController();
@@ -71,7 +69,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 // "Skip".tr(),
                 style: TextStyles.font18yallow700,
               ),
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamedAndRemoveUntil(
+                  Routes.homeLayout,
+                  predicate: (route) => false,
+                );
+              },
             ),
           )
         ],
@@ -118,11 +121,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 52.h),
             child: CustomButton(
               radius: 16.0,
-              text: isLast ?LocaleKeys.Enter.tr():LocaleKeys.next.tr(),
+              text: isLast ? LocaleKeys.Enter.tr() : LocaleKeys.next.tr(),
               //  "Enter".tr() : "Next".tr(),
               onPressed: () {
                 if (isLast) {
-                  // context.pushNamed(Routes.selectLanguageScreen);
+                  context.pushNamedAndRemoveUntil(
+                    Routes.homeLayout,
+                    predicate: (route) => false,
+                  );
                 } else {
                   _pageController.nextPage(
                     curve: Curves.fastLinearToSlowEaseIn,
