@@ -41,6 +41,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              
               SvgPicture.asset("assets/svgs/logo_and_name.svg"),
               SizedBox(
                 height: 44.h,
