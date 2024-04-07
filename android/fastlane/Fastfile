@@ -1,0 +1,25 @@
+default_platform(:android)
+
+platform :android do
+  desc "Lane for Android Firebase App Distribution"
+  lane :firebase_distribution do
+    sh "flutter clean"
+    sh "flutter build apk --release"
+
+    # Check if the APK file exists
+    apk_path = "D:/my work projects/my work projects in flutter/home_ease/build/app/outputs/flutter-apk/app-release.apk"
+    unless File.exist?(apk_path)
+      UI.user_error!("Couldn't find binary at path abod  #{apk_path}.")
+    end
+    release = firebase_app_distribution(
+      app: "1:962821068285:android:6b9c368869bc6cb2503594",
+      firebase_cli_token: "1//03SYFMTPlSHsbCgYIARAAGAMSNwF-L9Ir-JKUmkKkWWwCB_piIP03s17-NugBcSKRgr2SjOvDA64_ie2GDi7grqQLcO3Jq6dIFko",
+      android_artifact_path: apk_path,
+      testers: "abdulrahmanramadan22@gmail.com ,ahmdalshayb77@gmail.com,abodramadan95@gmail.com",
+      release_notes: "First Fastlane Firebase Distribution release"
+    )
+  end
+end
+
+
+# done
