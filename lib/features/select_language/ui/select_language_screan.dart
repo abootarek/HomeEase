@@ -1,11 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/custom_Button.dart';
 import 'package:home_ease/features/select_language/ui/widgets/check_box.dart';
-import 'package:home_ease/features/select_language/ui/widgets/logo_and_text.dart';
 import 'package:home_ease/features/select_language/ui/widgets/radio_list_tile.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,6 +28,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
   int selectedOption = 0;
 
   bool isChecked = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -102,8 +104,11 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
                 height: 26.h,
               ),
               CustomButton(
+                radius: 16.0,
                 text: LocaleKeys.Enter.tr(),
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.onBoardingScreen);
+                },
               ),
             ],
           ),

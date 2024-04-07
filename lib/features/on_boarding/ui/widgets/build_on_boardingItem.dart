@@ -26,11 +26,15 @@ class BuildOnBoardingItem extends StatelessWidget {
         ),
         SizedBox(height: 24.h),
         // adjust height based on screen height
-        Text(
-          textAlign: TextAlign.center,
-          onBoardingModel.body,
-          // textAlign: TextAlign.center,
-          style: TextStyles.font16Black500WithOpacity,
+        SizedBox(
+          width: 305.w,
+          child: Text(
+            
+            textAlign: TextAlign.center,
+            onBoardingModel.body,
+            // textAlign: TextAlign.center,
+            style: TextStyles.font16Black500WithOpacity,
+          ),
         ),
       ],
     );

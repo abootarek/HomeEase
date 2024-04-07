@@ -7,5 +7,13 @@ abstract class  LocaleKeys {
   static const Arabic = 'Arabic';
   static const Enter = 'Enter';
   static const agreeingToTheTermsAndConditions = 'agreeingToTheTermsAndConditions';
+  static const findAllYourHouseNeedsInOnePlace = 'findAllYourHouseNeedsInOnePlace';
+  static const easyProcess = 'easyProcess';
+  static const weHaveTheBestInClassIndividualsWorkingJustForYou = 'weHaveTheBestInClassIndividualsWorkingJustForYou';
+  static const expertPeople = 'expertPeople';
+  static const weHaveAllTheHouseholdServicesYouNeedOnADailyBasisWithEasyAccess = 'weHaveAllTheHouseholdServicesYouNeedOnADailyBasisWithEasyAccess';
+  static const allInOnePlace = 'allInOnePlace';
+  static const skip = 'skip';
+  static const next = 'next';
 
 }

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
+import 'package:home_ease/core/routing/app_router.dart';
+import 'package:home_ease/core/routing/routes.dart';
 
 class HomeEase extends StatelessWidget {
   const HomeEase({super.key});
@@ -19,12 +20,13 @@ class HomeEase extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
+        onGenerateRoute: AppRouter().generateRoute,
         theme: ThemeData(
           useMaterial3: true,
           // primarySwatch: Colors.blue,
           fontFamily: 'Quicksand',
         ),
-        home: OnBoardingScreen(),
+        initialRoute: Routes.selectLanguageScreen,
       ),
     );
   }
