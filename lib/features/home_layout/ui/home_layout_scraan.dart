@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:home_ease/translations/locale_keys.g.dart';
 
 class HomeLayoutScreen extends StatelessWidget {
   const HomeLayoutScreen({super.key});
@@ -23,16 +25,16 @@ class HomeLayoutScreen extends StatelessWidget {
           onTap: (value) {
             context.read<HomeLayoutCubit>().changeBottomNav(value);
           },
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              label: 'Home',
+              icon: const Icon(Icons.home_outlined),
+              label: LocaleKeys.home.tr(),
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
               label: "Favorite",
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
               label: "Favorite",
             ),

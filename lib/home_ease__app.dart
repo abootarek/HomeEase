@@ -26,7 +26,7 @@ class HomeEase extends StatelessWidget {
           // primarySwatch: Colors.blue,
           fontFamily: 'Quicksand',
         ),
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.selectLanguageScreen,
       ),
     );
   }

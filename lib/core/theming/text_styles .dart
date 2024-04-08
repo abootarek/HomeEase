@@ -15,14 +15,23 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     color: ColorsApp.black,
   );
+  static TextStyle font24Black700 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.black,
+  );
 
-   static TextStyle font18yallow700 = TextStyle(
+  static TextStyle font18yallow700 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
     color: ColorsApp.yallow,
-  
   );
 
+  static TextStyle font18Black700 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.black,
+  );
 
   static TextStyle font16Black500WithOpacity = TextStyle(
     fontSize: 16.sp,
@@ -30,15 +39,48 @@ class TextStyles {
     color: ColorsApp.black.withOpacity(0.5),
   );
 
+ static TextStyle font16Gray500 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsApp.gray
+  );
   static TextStyle font16Black600 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
     color: ColorsApp.black,
   );
 
+  static TextStyle font14Black400 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorsApp.black,
+  );
+  static TextStyle font14yallow500 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsApp.yallow,
+  );
+
   static TextStyle font12blackOpacity700 = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w700,
     color: ColorsApp.blackOpacity,
+  );
+
+  static TextStyle font12mainGreen700 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.mainGreen,
+  );
+  static TextStyle font12whiteOpacity700 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.white,
+  );
+
+  static TextStyle font10whiteOpacity500 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsApp.white.withOpacity(0.4),
   );
 }

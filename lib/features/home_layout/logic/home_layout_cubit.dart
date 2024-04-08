@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:home_ease/features/home/ui/home_screen.dart';
 import 'package:meta/meta.dart';
 
 part 'home_layout_state.dart';
@@ -10,7 +11,7 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
   int currentIndex = 0;
 
   List<Widget> screens = [
-    HomeScreen(),
+    const HomeScreen(),
     // abod(),
     // soha(),
   ];
@@ -19,17 +20,3 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
     emit(BottomNavigationBarChange());
   }
 }
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home"),
-      ),
-    );
-  }
-}
-
