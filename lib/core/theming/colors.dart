@@ -1,8 +1,11 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class ColorsApp {
-  
   static const Color mainGreen = Color(0xFF5FD068);
+
+  static const Color darkGreen = Color(0xFF4B8673);
 
   static const Color lightGreen = Color(0xFFF9FFF6);
 
@@ -17,6 +20,23 @@ class ColorsApp {
   static Color yallow = const Color(0xFFF5DF99);
 
   static Color blackOpacity = const Color(0xFF000000).withOpacity(0.5);
+
+
+  
 }
 
-
+MaterialColor mainGreen = const MaterialColor(
+  0xff5FD068,
+  <int, Color>{
+    50: Color(0xff5FD068),
+    100: Color(0xff5FD068),
+    200: Color(0xff5FD068),
+    300: Color(0xff5FD068),
+    400: Color(0xff5FD068),
+    500: Color(0xff5FD068),
+    600: Color(0xff5FD068),
+    700: Color(0xff5FD068),
+    800: Color(0xff5FD068),
+    900: Color(0xff5FD068),
+  },
+);

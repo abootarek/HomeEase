@@ -5,6 +5,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_ease/core/routing/app_router.dart';
 import 'package:home_ease/core/routing/routes.dart';
+import 'package:home_ease/core/theming/colors.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
 
 class HomeEase extends StatelessWidget {
   const HomeEase({super.key});
@@ -22,11 +24,12 @@ class HomeEase extends StatelessWidget {
         locale: context.locale,
         onGenerateRoute: AppRouter().generateRoute,
         theme: ThemeData(
+          appBarTheme: AppBarTheme(titleTextStyle: TextStyles.font18Black700),
           useMaterial3: true,
-          // primarySwatch: Colors.blue,
+          primarySwatch: mainGreen,
           fontFamily: 'Quicksand',
         ),
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.selectLanguageScreen,
       ),
     );
   }

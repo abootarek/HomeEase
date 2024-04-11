@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/routing/routes.dart';
+import 'package:home_ease/features/categorie/ui/categories_scraan.dart';
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:home_ease/features/home_layout/ui/home_layout_scraan.dart';
 import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
@@ -31,6 +32,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const SelectLanguageScreen(),
         );
+            case Routes.categoriesScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CategoriesScreen(),
+        );
       case Routes.homeLayout:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
@@ -38,6 +43,7 @@ class AppRouter {
             child: const HomeLayoutScreen(),
           ),
         );
+        
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
