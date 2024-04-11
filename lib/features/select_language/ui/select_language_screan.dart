@@ -108,7 +108,7 @@ class _SelectLanguageScreenState extends State<SelectLanguageScreen> {
                 radius: 16.0,
                 text: LocaleKeys.Enter.tr(),
                 onPressed: () {
-                  context.pushNamed(Routes.homeLayout);
+                  context.pushNamed(Routes.onBoardingScreen);
                 },
               ),
             ],

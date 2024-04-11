@@ -30,4 +30,7 @@ abstract class LocaleKeys {
   static const findYourHomeServiceNeedAHelpingHandToday =
       "Find Your Home Service \nNeed A Helping Hand Today?";
   static const home = "Home";
+  static const categories = "Categories";
+
+  static const findCategory = "Find Category";
 }

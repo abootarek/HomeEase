@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:home_ease/features/categorie/ui/categories_scraan.dart';
 import 'package:home_ease/features/home/ui/home_screen.dart';
 import 'package:meta/meta.dart';
 
@@ -12,6 +13,7 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
 
   List<Widget> screens = [
     const HomeScreen(),
+    const CategoriesScreen(),
     // abod(),
     // soha(),
   ];
