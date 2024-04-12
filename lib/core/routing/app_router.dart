@@ -3,6 +3,7 @@ import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/features/categorie/ui/categories_scraan.dart';
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:home_ease/features/home_layout/ui/home_layout_scraan.dart';
+import 'package:home_ease/features/login/ui/login_screen.dart';
 import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:home_ease/features/select_language/ui/select_language_screan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,7 +33,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const SelectLanguageScreen(),
         );
-            case Routes.categoriesScreen:
+      case Routes.loginScreen:
+        return MaterialPageRoute(
+          builder: (context) => const LoginScreen(),
+        );
+      case Routes.categoriesScreen:
         return MaterialPageRoute(
           builder: (context) => const CategoriesScreen(),
         );
@@ -43,7 +48,7 @@ class AppRouter {
             child: const HomeLayoutScreen(),
           ),
         );
-        
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
