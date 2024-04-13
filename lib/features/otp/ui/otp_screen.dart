@@ -1,0 +1,114 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:home_ease/core/theming/text_styles%20.dart';
+import 'package:home_ease/core/widgets/custom_button.dart';
+import 'package:pinput/pinput.dart';
+
+class ScreenOTP extends StatelessWidget {
+  ScreenOTP({super.key, this.time_send});
+
+  @override
+  int? time_send;
+  @override
+  Widget build(BuildContext context) {
+    final defaultPinTheme = PinTheme(
+      width: 58,
+      height: 60,
+      textStyle: const TextStyle(
+        fontSize: 30,
+      ),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 235, 244, 238),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: Colors.transparent),
+      ),
+    );
+    return Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 19, right: 19),
+          child: Column(
+            children: [
+              const Text(
+                'OTP',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontFamily: 'Quicksand',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(
+                height: 18,
+              ),
+              const Text(
+                'An Authentecation code has been sent to',
+                style: TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 196, 194, 194)),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              const Text(
+                '(+20) 1234567890',
+                style: TextStyle(
+                  letterSpacing: 2,
+                  fontFamily: 'Quicksand',
+                  fontSize: 14,
+                  color: Color(0xffF5DF99),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(
+                height: 28,
+              ),
+              Pinput(
+                length: 4,
+                onCompleted: (value) {
+                  print(value);
+                },
+                autofocus: true,
+                showCursor: true,
+                keyboardType: TextInputType.number,
+                defaultPinTheme: defaultPinTheme,
+                focusedPinTheme: defaultPinTheme.copyWith(
+                  decoration: defaultPinTheme.decoration!.copyWith(
+                    border: Border.all(color: const Color(0xff5FD068)),
+                  ),
+                ),
+                pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+                onSubmitted: (pin) => print(pin),
+              ),
+              const SizedBox(
+                height: 48,
+              ),
+              CustomButton(
+                text: 'Submit',
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Code Sent. Resend Code in',
+                      style: TextStyles.font14Black400),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    '$time_send 00.50',
+                    style: TextStyles.font14yallow500,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
