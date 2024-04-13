@@ -1,14 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/app_text_form_field.dart';
 import 'package:home_ease/core/widgets/card_contact.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
-import 'package:home_ease/features/register/ui/register_screen.dart';
+import 'package:home_ease/features/login/ui/login_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,30 +20,48 @@ class LoginScreen extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  'Login',
+                  'Register',
                   style: TextStyles.font28Black700,
                 ),
               ),
-              const SizedBox(
-                height: 14,
+               SizedBox(
+                height: 14.h,
               ),
               Text(
                 textAlign: TextAlign.center,
-                'Please Enter your Phone and password                             to continue',
+                'Please Enter your Phone and password                                  to continue',
                 style: TextStyles.font14Black500,
               ),
-              const SizedBox(
-                height: 18,
+               SizedBox(
+                height: 18.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
+                    'Full Name',
+                    style: TextStyles.font16Black600,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  AppTextFormField(
+                    suffixIcon: const Icon(
+                      Icons.person_2_outlined,
+                      color: Color(0xffB5B5B5),
+                    ),
+                    hintText: 'Enter your Name',
+                    validator: (p0) {},
+                  ),
+                  SizedBox(
+                    height: 18.h,
+                  ),
+                  Text(
                     'Phone',
                     style: TextStyles.font16Black600,
                   ),
-                  const SizedBox(
-                    height: 8,
+                  SizedBox(
+                    height: 8.h,
                   ),
                   AppTextFormField(
                     suffixIcon: const Icon(
@@ -53,15 +71,15 @@ class LoginScreen extends StatelessWidget {
                     hintText: 'Enter your phone',
                     validator: (p0) {},
                   ),
-                  const SizedBox(
-                    height: 18,
+                  SizedBox(
+                    height: 18.h,
                   ),
                   Text(
                     'Password',
                     style: TextStyles.font16Black600,
                   ),
-                  const SizedBox(
-                    height: 8,
+                  SizedBox(
+                    height: 8.h,
                   ),
                   AppTextFormField(
                     suffixIcon: const Icon(
@@ -83,15 +101,15 @@ class LoginScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 24,
+                  SizedBox(
+                    height: 24.h,
                   ),
                   CustomButton(
-                    text: 'Login',
+                    text: 'Register',
                     onPressed: () {},
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Center(
                     child: Text(
@@ -103,33 +121,33 @@ class LoginScreen extends StatelessWidget {
                     text: 'Facebook',
                     image: 'assets/images/facebook.png',
                   ),
-                  const SizedBox(
-                    height: 14,
+                  SizedBox(
+                    height: 14.h,
                   ),
                   const Card_contact(
                     text: 'Google',
                     image: 'assets/images/Vector.png',
                   ),
-                  const SizedBox(
-                    height: 24,
+                  SizedBox(
+                    height: 24.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Don’t Have Account ?'),
+                      const Text('Have Account ? '),
                       TextButton(
                         onPressed: () {
                           Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const RegisterScreen()),
+                                    const LoginScreen()),
                             ModalRoute.withName(
                                 'loginscreens'), // Replace '/home' with the route name you want to navigate until
                           );
                         },
                         child: Text(
-                          'Sign Up',
+                          'Sign in',
                           style: TextStyles.font16Black700,
                         ),
                       )

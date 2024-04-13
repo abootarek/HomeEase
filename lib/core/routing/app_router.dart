@@ -5,6 +5,8 @@ import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:home_ease/features/home_layout/ui/home_layout_scraan.dart';
 import 'package:home_ease/features/login/ui/login_screen.dart';
 import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
+import 'package:home_ease/features/otp/ui/otp_screen.dart';
+import 'package:home_ease/features/register/ui/register_screen.dart';
 import 'package:home_ease/features/select_language/ui/select_language_screan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,6 +38,14 @@ class AppRouter {
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (context) => const LoginScreen(),
+        );
+      case Routes.registerScreen:
+        return MaterialPageRoute(
+          builder: (context) => const RegisterScreen(),
+        );
+      case Routes.otpScreen:
+        return MaterialPageRoute(
+          builder: (context) => ScreenOTP(),
         );
       case Routes.categoriesScreen:
         return MaterialPageRoute(
