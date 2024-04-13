@@ -99,14 +99,14 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyles.font12black500,
                     ),
                   ),
-                  const Card_contact(
+                  const CardSocial(
                     text: 'Facebook',
                     image: 'assets/images/facebook.png',
                   ),
                   const SizedBox(
                     height: 14,
                   ),
-                  const Card_contact(
+                  const CardSocial(
                     text: 'Google',
                     image: 'assets/images/Vector.png',
                   ),

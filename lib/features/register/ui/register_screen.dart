@@ -117,14 +117,14 @@ class RegisterScreen extends StatelessWidget {
                       style: TextStyles.font12black500,
                     ),
                   ),
-                  const Card_contact(
+                  const CardSocial(
                     text: 'Facebook',
                     image: 'assets/images/facebook.png',
                   ),
                   SizedBox(
                     height: 14.h,
                   ),
-                  const Card_contact(
+                  const CardSocial(
                     text: 'Google',
                     image: 'assets/images/Vector.png',
                   ),
