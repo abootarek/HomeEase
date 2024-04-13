@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 
-class Card_contact extends StatelessWidget {
+class CardSocial extends StatelessWidget {
   final String text;
   final String image;
 
-  const Card_contact({
+  const CardSocial({
     Key? key,
     required this.text,
     required this.image,
