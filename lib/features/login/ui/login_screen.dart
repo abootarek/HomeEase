@@ -27,10 +27,13 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 14,
               ),
-              Text(
-                textAlign: TextAlign.center,
-                'Please Enter your Phone and password                             to continue',
-                style: TextStyles.font14Black500,
+              Padding(
+                padding: const EdgeInsets.only(left: 55, right: 52),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  'Please Enter your Phone and password to continue',
+                  style: TextStyles.font14Black500,
+                ),
               ),
               const SizedBox(
                 height: 18,

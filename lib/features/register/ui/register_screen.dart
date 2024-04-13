@@ -6,6 +6,7 @@ import 'package:home_ease/core/widgets/card_contact.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
 import 'package:home_ease/features/login/ui/login_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_ease/features/otp/ui/otp_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -24,15 +25,18 @@ class RegisterScreen extends StatelessWidget {
                   style: TextStyles.font28Black700,
                 ),
               ),
-               SizedBox(
+              SizedBox(
                 height: 14.h,
               ),
-              Text(
-                textAlign: TextAlign.center,
-                'Please Enter your Phone and password                                  to continue',
-                style: TextStyles.font14Black500,
+              Padding(
+                padding: const EdgeInsets.only(left: 55, right: 52),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  'Please Enter your Phone and password to continue',
+                  style: TextStyles.font14Black500,
+                ),
               ),
-               SizedBox(
+              SizedBox(
                 height: 18.h,
               ),
               Column(
@@ -106,7 +110,12 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   CustomButton(
                     text: 'Register',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ScreenOTP()),
+                      );
+                    },
                   ),
                   SizedBox(
                     height: 16.h,

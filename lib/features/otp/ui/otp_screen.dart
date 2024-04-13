@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
+import 'package:home_ease/features/resetpassword/ui/reset_password_screen.dart';
 import 'package:pinput/pinput.dart';
 
 class ScreenOTP extends StatelessWidget {
@@ -86,7 +87,13 @@ class ScreenOTP extends StatelessWidget {
               ),
               CustomButton(
                 text: 'Submit',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPassword_Screen()),
+                  );
+                },
               ),
               const SizedBox(
                 height: 32,
