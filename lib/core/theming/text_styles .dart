@@ -15,9 +15,9 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     color: ColorsApp.black,
   );
-  static TextStyle font30Black500 = TextStyle(
-    fontSize: 30.sp,
-    fontWeight: FontWeight.w500,
+  static TextStyle font28Black700 = TextStyle(
+    fontSize: 28.sp,
+    fontWeight: FontWeight.w700,
     color: ColorsApp.black,
   );
   static TextStyle font24Black700 = TextStyle(
@@ -57,6 +57,16 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: ColorsApp.black,
   );
+  static TextStyle font14Black500 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsApp.gray,
+  );
+  static TextStyle font16Black700 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsApp.black,
+  );
   static TextStyle font14yallow500 = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
@@ -78,6 +88,11 @@ class TextStyles {
     fontSize: 12.sp,
     fontWeight: FontWeight.w700,
     color: ColorsApp.white,
+  );
+  static TextStyle font12black500 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsApp.black,
   );
 
   static TextStyle font10whiteOpacity500 = TextStyle(
