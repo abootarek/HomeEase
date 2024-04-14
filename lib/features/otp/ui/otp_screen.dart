@@ -4,6 +4,7 @@ import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
 import 'package:home_ease/features/resetpassword/ui/reset_password_screen.dart';
 import 'package:pinput/pinput.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ScreenOTP extends StatelessWidget {
   ScreenOTP({super.key, this.time_send});
@@ -13,8 +14,8 @@ class ScreenOTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
-      width: 58,
-      height: 60,
+      width: 58.w,
+      height: 60.h,
       textStyle: const TextStyle(
         fontSize: 30,
       ),
@@ -39,8 +40,8 @@ class ScreenOTP extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              const SizedBox(
-                height: 18,
+              SizedBox(
+                height: 18.h,
               ),
               const Text(
                 'An Authentecation code has been sent to',
@@ -49,8 +50,8 @@ class ScreenOTP extends StatelessWidget {
                     fontSize: 14,
                     color: Color.fromARGB(255, 196, 194, 194)),
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
               const Text(
                 '(+20) 1234567890',
@@ -62,8 +63,8 @@ class ScreenOTP extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              const SizedBox(
-                height: 28,
+              SizedBox(
+                height: 28.h,
               ),
               Pinput(
                 length: 4,
@@ -82,29 +83,23 @@ class ScreenOTP extends StatelessWidget {
                 pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
                 onSubmitted: (pin) => print(pin),
               ),
-              const SizedBox(
-                height: 48,
+              SizedBox(
+                height: 48.h,
               ),
               CustomButton(
                 text: 'Submit',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ResetPassword_Screen()),
-                  );
-                },
+                onPressed: () {},
               ),
-              const SizedBox(
-                height: 32,
+              SizedBox(
+                height: 32.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Code Sent. Resend Code in',
                       style: TextStyles.font14Black400),
-                  const SizedBox(
-                    width: 5,
+                  SizedBox(
+                    width: 5.w,
                   ),
                   Text(
                     '$time_send 00.50',

@@ -93,18 +93,6 @@ class RegisterScreen extends StatelessWidget {
                     hintText: 'Enter Your Password',
                     validator: (p0) {},
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Forget Password ?',
-                          style: TextStyles.font16Black600,
-                        ),
-                      )
-                    ],
-                  ),
                   SizedBox(
                     height: 24.h,
                   ),
