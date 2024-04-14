@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
-import 'package:home_ease/features/resetpassword/ui/reset_password_screen.dart';
 import 'package:pinput/pinput.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ScreenOTP extends StatelessWidget {
-  ScreenOTP({super.key, this.time_send});
+// ignore: must_be_immutable
+class OtpScreen extends StatelessWidget {
+  OtpScreen({super.key, this.timeSend});
 
-  @override
-  int? time_send;
+  
+  int? timeSend;
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
@@ -44,7 +44,7 @@ class ScreenOTP extends StatelessWidget {
                 height: 18.h,
               ),
               const Text(
-                'An Authentecation code has been sent to',
+                'An Authentication code has been sent to',
                 style: TextStyle(
                     fontFamily: 'Quicksand',
                     fontSize: 14,
@@ -57,7 +57,6 @@ class ScreenOTP extends StatelessWidget {
                 '(+20) 1234567890',
                 style: TextStyle(
                   letterSpacing: 2,
-                  fontFamily: 'Quicksand',
                   fontSize: 14,
                   color: Color(0xffF5DF99),
                   fontWeight: FontWeight.w700,
@@ -102,7 +101,7 @@ class ScreenOTP extends StatelessWidget {
                     width: 5.w,
                   ),
                   Text(
-                    '$time_send 00.50',
+                    '$timeSend 00.50',
                     style: TextStyles.font14yallow500,
                   )
                 ],

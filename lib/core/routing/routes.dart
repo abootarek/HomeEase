@@ -11,4 +11,8 @@ class Routes {
   static const String categoriesScreen = "/categoriesScreen";
 
   static const String selectLanguageScreen = "/SelectLanguageScreen";
+
+    static const String forgetPasswordScreen = "/forgetPasswordScreen";
+
+  
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/features/categorie/ui/categories_scraan.dart';
+import 'package:home_ease/features/forgetpassword/ui/forget_password_screen.dart';
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:home_ease/features/home_layout/ui/home_layout_scraan.dart';
 import 'package:home_ease/features/login/ui/login_screen.dart';
@@ -46,12 +47,17 @@ class AppRouter {
         );
       case Routes.otpScreen:
         return MaterialPageRoute(
-          builder: (context) => ScreenOTP(),
+          builder: (context) => OtpScreen(),
         );
 
       case Routes.resetPasswordScreen:
         return MaterialPageRoute(
-          builder: (context) => const ResetPassword_Screen(),
+          builder: (context) => const ResetPasswordScreen(),
+        );
+
+      case Routes.forgetPasswordScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ForgetPasswordScreen(),
         );
       case Routes.categoriesScreen:
         return MaterialPageRoute(

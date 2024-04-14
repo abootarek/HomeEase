@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/app_text_form_field.dart';
 import 'package:home_ease/core/widgets/card_contact.dart';
@@ -17,7 +19,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 58, right: 19, left: 19),
+        padding: const EdgeInsets.only(top: 80, right: 19, left: 19),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -82,11 +84,13 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ForgetpassScreen()),
-                          );
+                          context.pushNamed(Routes.forgetPasswordScreen);
+
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //       builder: (context) => const ForgetpassScreen()),
+                          // );
                         },
                         child: Text(
                           'Forget Password ?',

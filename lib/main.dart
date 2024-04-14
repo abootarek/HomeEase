@@ -7,7 +7,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-
 void main() async {
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
@@ -15,11 +14,11 @@ void main() async {
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.white,
+
     statusBarIconBrightness:
         Brightness.dark, //<-- For Android SEE HERE (dark icons)
   ));
 
-  WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
 
