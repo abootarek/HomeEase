@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:home_ease/core/helpers/navigation_extensions.dart';
 import 'package:home_ease/core/routing/routes.dart';
+import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:home_ease/core/widgets/app_text_form_field.dart';
 import 'package:home_ease/core/widgets/card_contact.dart';
@@ -154,7 +155,16 @@ class LoginScreen extends StatelessWidget {
                           'Sign Up',
                           style: TextStyles.font16Black700,
                         ),
-                      )
+                      ),
+                      // Switch(
+                      //     activeColor: ColorsApp.mainGreen,
+                      //     value: noify,
+                      //     onChanged: (val) {
+                      //       setState(() {
+                      //         noify = val;
+                      //         print(noify);
+                      //       });
+                      //     })
                     ],
                   ),
                 ],
