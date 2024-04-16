@@ -5,12 +5,26 @@ import 'package:home_ease/home_ease__app.dart';
 import 'package:easy_localization/easy_localization.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   WidgetsFlutterBinding.ensureInitialized();
+  
+await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyBbkJ9vmbaQHDFBdXUJdCrnS8qIm3yxSt0",
+      appId: "1:962821068285:android:6b9c368869bc6cb2503594",
+      messagingSenderId: "962821068285",
+      projectId: "home-ease-distribute",
+    ),
+  );
+ 
+
+
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.white,
