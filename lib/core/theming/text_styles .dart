@@ -38,6 +38,12 @@ class TextStyles {
     color: ColorsApp.black,
   );
 
+  static TextStyle font16Black400 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorsApp.black,
+  );
+
   static TextStyle font16Black500WithOpacity = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,

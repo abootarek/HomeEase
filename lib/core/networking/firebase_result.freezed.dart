@@ -16,23 +16,23 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$FirebaseResult<T> {
-  T get data => throw _privateConstructorUsedError;
+  Object? get data => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(T data) failure,
+    required TResult Function(String data) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(T data)? failure,
+    TResult? Function(String data)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(T data)? failure,
+    TResult Function(String data)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,10 +55,6 @@ mixin _$FirebaseResult<T> {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $FirebaseResultCopyWith<T, FirebaseResult<T>> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -66,8 +62,6 @@ abstract class $FirebaseResultCopyWith<T, $Res> {
   factory $FirebaseResultCopyWith(
           FirebaseResult<T> value, $Res Function(FirebaseResult<T>) then) =
       _$FirebaseResultCopyWithImpl<T, $Res, FirebaseResult<T>>;
-  @useResult
-  $Res call({T data});
 }
 
 /// @nodoc
@@ -79,28 +73,13 @@ class _$FirebaseResultCopyWithImpl<T, $Res, $Val extends FirebaseResult<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = freezed,
-  }) {
-    return _then(_value.copyWith(
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<T, $Res>
-    implements $FirebaseResultCopyWith<T, $Res> {
+abstract class _$$SuccessImplCopyWith<T, $Res> {
   factory _$$SuccessImplCopyWith(
           _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
       __$$SuccessImplCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T data});
 }
@@ -162,7 +141,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(T data) failure,
+    required TResult Function(String data) failure,
   }) {
     return success(data);
   }
@@ -171,7 +150,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(T data)? failure,
+    TResult? Function(String data)? failure,
   }) {
     return success?.call(data);
   }
@@ -180,7 +159,7 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(T data)? failure,
+    TResult Function(String data)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -226,21 +205,18 @@ abstract class Success<T> implements FirebaseResult<T> {
 
   @override
   T get data;
-  @override
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FailureImplCopyWith<T, $Res>
-    implements $FirebaseResultCopyWith<T, $Res> {
+abstract class _$$FailureImplCopyWith<T, $Res> {
   factory _$$FailureImplCopyWith(
           _$FailureImpl<T> value, $Res Function(_$FailureImpl<T>) then) =
       __$$FailureImplCopyWithImpl<T, $Res>;
-  @override
   @useResult
-  $Res call({T data});
+  $Res call({String data});
 }
 
 /// @nodoc
@@ -254,13 +230,13 @@ class __$$FailureImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$FailureImpl<T>(
-      freezed == data
+      null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as T,
+              as String,
     ));
   }
 }
@@ -271,7 +247,7 @@ class _$FailureImpl<T> implements Failure<T> {
   const _$FailureImpl(this.data);
 
   @override
-  final T data;
+  final String data;
 
   @override
   String toString() {
@@ -283,12 +259,11 @@ class _$FailureImpl<T> implements Failure<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailureImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.data, data) || other.data == data));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, data);
 
   @JsonKey(ignore: true)
   @override
@@ -300,7 +275,7 @@ class _$FailureImpl<T> implements Failure<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T data) success,
-    required TResult Function(T data) failure,
+    required TResult Function(String data) failure,
   }) {
     return failure(data);
   }
@@ -309,7 +284,7 @@ class _$FailureImpl<T> implements Failure<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(T data)? success,
-    TResult? Function(T data)? failure,
+    TResult? Function(String data)? failure,
   }) {
     return failure?.call(data);
   }
@@ -318,7 +293,7 @@ class _$FailureImpl<T> implements Failure<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T data)? success,
-    TResult Function(T data)? failure,
+    TResult Function(String data)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -360,11 +335,10 @@ class _$FailureImpl<T> implements Failure<T> {
 }
 
 abstract class Failure<T> implements FirebaseResult<T> {
-  const factory Failure(final T data) = _$FailureImpl<T>;
+  const factory Failure(final String data) = _$FailureImpl<T>;
 
   @override
-  T get data;
-  @override
+  String get data;
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<T, _$FailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;

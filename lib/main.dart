@@ -13,8 +13,18 @@ void main() async {
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   WidgetsFlutterBinding.ensureInitialized();
+  
+await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyBbkJ9vmbaQHDFBdXUJdCrnS8qIm3yxSt0",
+      appId: "1:962821068285:android:6b9c368869bc6cb2503594",
+      messagingSenderId: "962821068285",
+      projectId: "home-ease-distribute",
+    ),
+  );
+ 
 
-  await Firebase.initializeApp();
+
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.white,
