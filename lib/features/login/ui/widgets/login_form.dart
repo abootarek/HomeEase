@@ -44,6 +44,9 @@ class LoginForm extends StatelessWidget {
           hintText: 'Enter Your Password',
           validator: (p0) {},
         ),
+        SizedBox(
+          height: 16.h,
+        ),
       ],
     );
   }
