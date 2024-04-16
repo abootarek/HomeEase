@@ -7,9 +7,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class OtpScreen extends StatelessWidget {
-  OtpScreen({super.key, this.timeSend});
+  // ignore: prefer_typing_uninitialized_variables
+  final phoneNumber;
 
-  
+  OtpScreen({super.key, this.timeSend, required this.phoneNumber});
+
   int? timeSend;
   @override
   Widget build(BuildContext context) {
@@ -53,9 +55,9 @@ class OtpScreen extends StatelessWidget {
               SizedBox(
                 height: 5.h,
               ),
-              const Text(
-                '(+20) 1234567890',
-                style: TextStyle(
+              Text(
+                '$phoneNumber',
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontSize: 14,
                   color: Color(0xffF5DF99),
