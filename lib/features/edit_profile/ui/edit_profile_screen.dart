@@ -131,9 +131,9 @@ class EditProfileSreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
