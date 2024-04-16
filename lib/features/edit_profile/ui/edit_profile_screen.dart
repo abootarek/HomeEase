@@ -9,7 +9,6 @@ import 'package:home_ease/core/widgets/app_text_form_field.dart';
 import 'package:home_ease/core/widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:home_ease/core/theming/colors.dart';
 
 class EditProfileSreen extends StatelessWidget {
   const EditProfileSreen({super.key});
@@ -25,7 +24,7 @@ class EditProfileSreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 18.h),
+        padding: EdgeInsets.symmetric(horizontal: 21.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

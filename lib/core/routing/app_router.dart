@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/features/Profile/ui/Profile_screen.dart';
 import 'package:home_ease/features/categorie/ui/categories_scraan.dart';
+import 'package:home_ease/features/contact_us/ui/contact_us_screen.dart';
 import 'package:home_ease/features/edit_profile/ui/edit_profile_screen.dart';
 import 'package:home_ease/features/forgetpassword/ui/forget_password_screen.dart';
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
@@ -65,9 +66,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const ProfileScreen(),
         );
-          case Routes.editprofileScreenScreen:
+      case Routes.editprofileScreenScreen:
         return MaterialPageRoute(
           builder: (context) => const EditProfileSreen(),
+        );
+      case Routes.contactusScreenScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ContactUS(),
         );
       case Routes.categoriesScreen:
         return MaterialPageRoute(

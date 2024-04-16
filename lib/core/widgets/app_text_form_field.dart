@@ -19,19 +19,20 @@ class AppTextFormField extends StatelessWidget {
 
   TextEditingController? controller;
 
-  AppTextFormField(
-      {super.key,
-      this.contentPadding,
-      this.focusedBorder,
-      this.enabledBorder,
-      this.inputTextStyle,
-      this.hintStyle,
-      required this.hintText,
-      this.isObscureText,
-      this.suffixIcon,
-      this.backgroundColor,
-      required this.validator,
-      this.controller});
+  AppTextFormField({
+    super.key,
+    this.contentPadding,
+    this.focusedBorder,
+    this.enabledBorder,
+    this.inputTextStyle,
+    this.hintStyle,
+    required this.hintText,
+    this.isObscureText,
+    this.suffixIcon,
+    this.backgroundColor,
+    required this.validator,
+    this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
