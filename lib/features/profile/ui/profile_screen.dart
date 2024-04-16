@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:home_ease/core/helpers/navigation_extensions.dart';
+import 'package:home_ease/core/routing/routes.dart';
 import 'package:home_ease/core/theming/colors.dart';
 import 'package:home_ease/core/theming/text_styles%20.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -56,7 +58,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           CustomButton(
             width: 120,
             radius: 60.r,
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.editprofileScreenScreen);
+            },
             text: 'Edit',
             style: TextStyles.font14Black700,
           ),

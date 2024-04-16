@@ -18,11 +18,10 @@ class ColorsApp {
   static Color gray = const Color(0xFFB5B5B5);
 
   static Color yallow = const Color(0xFFF5DF99);
+  static Color lightRed = const Color(0xffffe5e5);
+  static Color red = const Color(0xffF04545);
 
   static Color blackOpacity = const Color(0xFF000000).withOpacity(0.5);
-
-
-  
 }
 
 MaterialColor mainGreen = const MaterialColor(
