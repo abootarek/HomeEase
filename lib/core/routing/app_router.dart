@@ -8,6 +8,7 @@ import 'package:home_ease/features/forgetpassword/ui/forget_password_screen.dart
 import 'package:home_ease/features/home_layout/logic/home_layout_cubit.dart';
 import 'package:home_ease/features/home_layout/ui/home_layout_scraan.dart';
 import 'package:home_ease/features/login/ui/login_screen.dart';
+import 'package:home_ease/features/notification/ui/notification_screen.dart';
 import 'package:home_ease/features/on_boarding/ui/on_boarding_screen.dart';
 import 'package:home_ease/features/otp/ui/otp_screen.dart';
 import 'package:home_ease/features/register/ui/register_screen.dart';
@@ -73,6 +74,10 @@ class AppRouter {
       case Routes.contactusScreenScreen:
         return MaterialPageRoute(
           builder: (context) => const ContactUS(),
+        );
+      case Routes.notificationScreenScreen:
+        return MaterialPageRoute(
+          builder: (context) => const NotificationScreen(),
         );
       case Routes.categoriesScreen:
         return MaterialPageRoute(

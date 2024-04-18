@@ -8,6 +8,7 @@ class Routes {
   static const String profileScreenScreen = "/profileScreenScreen";
   static const String editprofileScreenScreen = "/editprofileScreenScreen";
   static const String contactusScreenScreen = "/contactusScreenScreen";
+  static const String notificationScreenScreen = "/notificationScreenScreen";
   static const String homeScreen = "/homeScreen";
 
   static const String homeLayout = "/homeLayout";
